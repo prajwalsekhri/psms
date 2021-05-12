@@ -5,17 +5,15 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
-import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 @EnableWebMvc
-@SpringBootApplication
 @EnableAutoConfiguration
-@EnableMongoRepositories(basePackages = "com.personal.psms.dao.repositories.*")
+@EnableReactiveMongoRepositories(basePackages = {"com.personal.psms.dao.repositories"})
 @PropertySource("classpath:application.properties")
-@ComponentScan(basePackages = {"com.personal.psms.api.*",
+@SpringBootApplication(scanBasePackages = {"com.personal.psms.api.*",
 		"com.personal.psms.dao.*",
 		"com.personal.psms.service.*"})
 public class PSMSApplication extends SpringBootServletInitializer{
