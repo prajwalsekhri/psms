@@ -20,5 +20,28 @@
             </plugin>
         </plugins>
     </build>
+    
+     <dependencies>
+  		<dependency>
+			<groupId>com.personal</groupId>
+			<artifactId>psms-api</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.personal</groupId>
+			<artifactId>psms-dao</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.personal</groupId>
+			<artifactId>psms-service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		
+		</dependencies>
+		
+    
   
 </project>

@@ -9,6 +9,7 @@
   	<module>psms-app</module>
   	<module>psms-dao</module>
   	<module>psms-api</module>
+  	<module>psms-service</module>
   </modules>
   
   	<parent>

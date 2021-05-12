@@ -6,10 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.personal.psms.dao.entities.Employee;
 import com.personal.psms.dao.repositories.EmployeeRepository;
 
-import reactor.core.publisher.Flux;
 
 @RestController
 @RequestMapping("rest/test")
@@ -24,7 +22,8 @@ public class EmployeeAPIV1{
 	}
 	
 	@GetMapping("all")
-	public Flux<Employee> getEmployee() {
-		return emp.findAll();
+	public String getEmployee() {
+		System.out.println("+++++++++++++++++++++");
+		return "HELLPOd";
 	}
 }
