@@ -19,7 +19,7 @@ public class EmployeeAPIV1{
 	@Autowired
 	private EmployeeService emp;
 	
-	@GetMapping("all")
+	@GetMapping("all1")
 	public Flux<Employee> getEmployee() {
 		return emp.getAll();
 	}
