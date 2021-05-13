@@ -8,8 +8,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Employee {
 	
 	@Id
-	private String userId;
-	private String userName;
+	private String id;
+	private String name;
+	
 	
 	
 	public Employee() {
@@ -17,31 +18,41 @@ public class Employee {
 	}
 
 
-	public Employee(String userId, String userName) {
-		this.userId = userId;
-		this.userName = userName;
+	
+
+	public Employee(String id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
 	}
 
 
 
-	public String getUserId() {
-		return userId;
+
+	public String getId() {
+		return id;
 	}
 
 
-	public void setUserId(String userId) {
-		this.userId = userId;
+
+	public void setId(String id) {
+		this.id = id;
 	}
 
 
-	public String getUserName() {
-		return userName;
+
+	public String getName() {
+		return name;
 	}
 
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+
+	public void setName(String name) {
+		this.name = name;
 	}
+
+
+
 	
 	
 }
