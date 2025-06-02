@@ -18,7 +18,6 @@ public class EmployeeAPIV1{
 	
 	@Autowired
 	private EmployeeService emp;
-	
 	@GetMapping(value = "all", produces = "text/event-stream")
 	public Flux<Employee> getEmployee() {
 		return emp.getAll();
